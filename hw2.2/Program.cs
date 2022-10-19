@@ -111,14 +111,17 @@ internal class Program
     {
         string name;
         int count = 0;
+        
         Console.WriteLine("Enter team name: ");
         name = Console.ReadLine();
         Team team = new Team(name);
+        
         string WorkerPosition = "";
         List<string> WorkerPositionList = new List<string>();
+        
         while (true)
         {
-            int action = 0;//enter a workday
+            int action = 0;
             Console.WriteLine("Choose action 1,2,3,4\n1. Add worker to the team\n2. Print information about team members\n3. Print details\n4. End");
             try
             {
@@ -129,10 +132,10 @@ internal class Program
                 Console.WriteLine(ex.Message);
             }
             Console.WriteLine();
+            
             switch (action)
             {
                 case 1:
-                    //count++;
                     string WorkerName;
                     Console.WriteLine("Enter name: ");
                     WorkerName = Console.ReadLine();
@@ -156,7 +159,7 @@ internal class Program
                     }
                     Console.WriteLine();
                     break;
-
+                    
                 case 2:
                     team.PrintTeamInfo();
                     Console.WriteLine();
